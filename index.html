@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tic Tac Toe — Modern</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="theme-dark">
+  <div id="app" class="app">
+    <header class="header">
+      <div class="logo" aria-hidden="true">✦</div>
+      <h1 class="title">TIC TAC TOE</h1>
+      <div class="controls-top">
+        <button id="themeToggle" class="btn small" aria-pressed="false">Toggle Theme</button>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="status-panel" aria-live="polite">
+        <div id="status" class="status">Welcome — choose mode to start</div>
+        <div class="mode-row">
+          <label>Mode
+            <select id="modeSelect" aria-label="Game mode">
+              <option value="pvp">Human vs Human</option>
+              <option value="pvc">Human vs Computer</option>
+            </select>
+          </label>
+          <label id="difficultyLabel" class="hidden">Difficulty
+            <select id="difficultySelect" aria-label="Difficulty">
+              <option value="easy">Easy</option>
+              <option value="medium" selected>Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+          </label>
+        </div>
+      </section>
+
+      <section class="board-wrap">
+        <div id="board" class="board" role="grid" aria-label="Tic Tac Toe board"></div>
+      </section>
+
+      <section class="panel">
+        <div class="scoreboard">
+          <div class="score"><strong>X</strong><span id="scoreX">0</span></div>
+          <div class="score"><strong>Draws</strong><span id="scoreD">0</span></div>
+          <div class="score"><strong>O</strong><span id="scoreO">0</span></div>
+        </div>
+
+        <div class="controls">
+          <button id="undoBtn" class="btn">Undo</button>
+          <button id="newGameBtn" class="btn primary">New Game</button>
+          <button id="resetScoresBtn" class="btn danger">Reset Scores</button>
+        </div>
+
+        <details class="stats" id="statsPanel">
+          <summary>Statistics</summary>
+          <div id="statsContent" class="stats-content"></div>
+        </details>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <small>Made with ♥ — Production-ready demo</small>
+    </footer>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
